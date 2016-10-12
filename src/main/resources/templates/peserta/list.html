@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Tanggal Lahir</th>
+        </thead>
+        <tbody>
+                <tr th:each="p : ${daftarPeserta}">
+                    <td th:text="${p.nama}">Nama</td>
+                    <td th:text="${p.email}">Email</td>
+                    <td th:text="${p.tanggallahir}">Email</td>
+                   
+                    <td><a href="edit.html" th:href="@{/peserta/form(id=${p.id})}">EDIT</a> | 
+                        <a href="view.html" th:href="@{/peserta/view(id=${p.id})}">LIHAT</a> | 
+                        <a href="view.html" th:href="@{/peserta/hapus(id=${p.id})}">HAPUS</a></td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+</html>

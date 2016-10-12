@@ -24,6 +24,7 @@ public class Peserta {
     @Id @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid",strategy = "uuid2")
     private String id;
+    
     @Column(nullable = false)
     @NotNull
     @NotEmpty
