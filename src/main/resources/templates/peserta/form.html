@@ -9,6 +9,7 @@
     <body>
         <h1>Edit Peserta</h1>
         <form action="#" th:action="@{/peserta/form}" th:object="${peserta}" method="POST">
+            <input type="hidden" th:field="*{id}" />
             <table border="1">               
                 <tbody>
                     <tr>

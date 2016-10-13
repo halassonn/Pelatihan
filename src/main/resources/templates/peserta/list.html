@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+    <a href="tambah.html" th:href="@{/peserta/form}">Tambah</a>
     <table border="1">
         <thead>
             <th>Nama</th>
@@ -17,7 +18,8 @@
                     <td th:text="${p.email}">Email</td>
                     <td th:text="${p.tanggallahir}">Email</td>
                    
-                    <td><a href="edit.html" th:href="@{/peserta/form(id=${p.id})}">EDIT</a> | 
+                    <td>
+                        <a href="edit.html" th:href="@{/peserta/form(id=${p.id})}">EDIT</a> | 
                         <a href="view.html" th:href="@{/peserta/view(id=${p.id})}">LIHAT</a> | 
                         <a href="view.html" th:href="@{/peserta/hapus(id=${p.id})}">HAPUS</a></td>
                 </tr>
